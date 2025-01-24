@@ -1,9 +1,135 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-	<title> testing...</title>
+	<meta charset="utf-8">
+	<title>Module 2 Solution</title>
+<style>
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 10px;
+	padding: 0;
+	background-color: white;
+	font-family: Arial;
+	box-sizing: border-box;
+}
+
+#header {
+	font-size: 1.75em;
+	text-align: center;
+	margin: 20px auto;
+	width: 100%;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+}
+
+#box {
+	background-color: #77DD77cd;
+	padding: 5px;
+	border: 3px solid black;
+	margin: 5px 5px 5px 5px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+p {
+	width: 180px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	border: 2px solid black;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 1.25em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+}
+#p1 {
+	background-color: tan;
+	position: absolute;
+}
+#p2 {
+	background-color: crimson;
+	position: absolute;
+}	
+#p3 {
+	background-color: yellow;
+	position: absolute;
+}
+
+#content {
+	margin-top: 30px;
+	font-size: 1em;
+}
+
+@media (min-width: 992px) {
+	.col-lg-4 {
+		width: 33.33%;
+	}
+	#box {
+		flex: 1 1 310px;
+		max-width: 33.33%
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-md-6 {
+		width: calc(50% - 10px);
+		max-width: 475px;
+	}
+	.col-md-12 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.col-sm-12 {
+		width: 100%;
+	}
+}
+
+</style>
 </head>
 <body>
-<h1>let's do this</h1>
+	<h1 id="header" class="row">Charlie's Smoothies</h1>
+
+	<div class="row">
+		<div id="box" class="col-lg-4 col-md-6 col-sm-12">
+			<p id="p1">Wayward Moon</p>
+				<div id="content">
+				This melon smoothie comes with your choice of honeydew or cantaloupe blended with banana, almond milk, vanilla and walnuts. It's creamy texture and light melon flavor are the perfect balance. This smoothie is packed with nutrition and fits well into any diet!
+				</div>
+		</div>
+
+	<div id="box" class="col-lg-4 col-md-6 col-sm-12">
+		<p id="p2">Crimson Banquet</p>
+			<div id="content">
+			This watermelon smoothie is blended with strawberries, mint, and coconut water. Not only is this ourmost beautiful smoothie, it is also incredibly refreshing for a hot day. It is perfect for feeling like you are on a tropical beach any time of year!
+			</div>
+	</div>
+
+	<div id="box" class="col-lg-4 col-md-12 col-sm-12">
+		<p id="p3">Face Wrinkler</p>
+			<div id="content">
+			This lemon smoothie (yes, you read that right) is blended with yogurt, agave nectar, frech ginger, and turmeric. Each ingredient adds to the bright, zingy flavor and adds some great health benefits. If you are feeling adventurous, or want to get a health boost, try it out!
+			</div>
+	</div>
+</div>
+
 </body>
 </html>
